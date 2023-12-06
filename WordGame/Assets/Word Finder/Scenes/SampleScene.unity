@@ -438,6 +438,7 @@ MonoBehaviour:
   - {fileID: 1594856255}
   - {fileID: 1865036211}
   - {fileID: 1833690704}
+  tryButton: {fileID: 1567037672}
 --- !u!4 &112054556
 Transform:
   m_ObjectHideFlags: 0
@@ -4707,7 +4708,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1567037673}
   m_OnClick:
     m_PersistentCalls:
