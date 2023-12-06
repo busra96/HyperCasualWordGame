@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class KeyboardKey : MonoBehaviour
 {
@@ -8,12 +9,15 @@ public class KeyboardKey : MonoBehaviour
     [Header(" Elements ")]
     [SerializeField]
     private TextMeshProUGUI letterText;
-    
-    
+
+
+    [Header(" Events ")] public static Action<char> onKeyPressed;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Button>().onClick.AddListener(Test);
+        GetComponent<Button>().onClick.AddListener(SendKeyPressedEvent);
     }
 
     // Update is called once per frame
@@ -22,8 +26,8 @@ public class KeyboardKey : MonoBehaviour
         
     }
 
-    private void Test()
+    private void SendKeyPressedEvent()
     {
-        Debug.Log(letterText.text);
+        onKeyPressed?.Invoke(letterText.text[0]);
     }
 }
