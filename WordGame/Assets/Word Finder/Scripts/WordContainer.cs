@@ -9,7 +9,7 @@ public class WordContainer : MonoBehaviour
     private void Awake()
     {
         letterContainers = GetComponentsInChildren<LetterContainer>();
-        Initialize();
+        //Initialize();
     }
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class WordContainer : MonoBehaviour
         
     }
     
-    private void Initialize()
+    public void Initialize()
     {
         for (int i = 0; i < letterContainers.Length; i++)
         {

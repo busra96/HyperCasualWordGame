@@ -402,6 +402,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6017804276045772732, guid: ab1450c6252b0004a9ff7e5a08b6dfd2, type: 3}
   m_PrefabInstance: {fileID: 95672938}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &112054554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112054556}
+  - component: {fileID: 112054555}
+  m_Layer: 0
+  m_Name: Input Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &112054555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112054554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69ab18c08746bc49baac20684189183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordContainers:
+  - {fileID: 775620804}
+  - {fileID: 279053536}
+  - {fileID: 577367885}
+  - {fileID: 1594856255}
+  - {fileID: 1865036211}
+  - {fileID: 1833690704}
+--- !u!4 &112054556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112054554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &133672060
 PrefabInstance:
   m_ObjectHideFlags: 0
