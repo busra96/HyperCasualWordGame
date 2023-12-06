@@ -7,13 +7,13 @@ public class InputManager : MonoBehaviour
 
     [Header(" Settings ")] 
     private int currentWordContainerIndex;
+    private bool canAddLetter = true;
     
     
     // Start is called before the first frame update
     void Start()
     {
         Initialize();
-
 
         KeyboardKey.onKeyPressed += KeyPressedCallback;
     }
@@ -35,10 +35,14 @@ public class InputManager : MonoBehaviour
     
     private void KeyPressedCallback(char letter)
     {
+        if(!canAddLetter)
+            return;
+        
         wordContainers[currentWordContainerIndex].Add(letter);
         
         if (wordContainers[currentWordContainerIndex].IsComplete())
         {
+            canAddLetter = false;
             //CheckWord();
             // currentWordContainerIndex++;
         }
@@ -54,9 +58,16 @@ public class InputManager : MonoBehaviour
         else
         {
             Debug.Log("Wrong Word");
+            canAddLetter = true;
             currentWordContainerIndex++;
         }
-        
+    }
+
+
+    public void BackspacePressedCallback()
+    {
+        wordContainers[currentWordContainerIndex].RemoveLetter();
+        canAddLetter = true;
     }
     
 }
