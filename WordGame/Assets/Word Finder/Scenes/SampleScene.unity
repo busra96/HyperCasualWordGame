@@ -4016,7 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd542d7eb6de65c4e8ed6564172d6975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secretWord: 
+  secretWord: busra
 --- !u!4 &1394488064
 Transform:
   m_ObjectHideFlags: 0
