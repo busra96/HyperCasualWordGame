@@ -56,6 +56,8 @@ public class InputManager : MonoBehaviour
         string wordToCheck = wordContainers[currentWordContainerIndex].GetWord();
         string secretWord = WordManager.instance.GetSecretWord();
 
+        wordContainers[currentWordContainerIndex].Colorize(secretWord);
+
         if (wordToCheck == secretWord)
             Debug.Log("Level Complete");
         else

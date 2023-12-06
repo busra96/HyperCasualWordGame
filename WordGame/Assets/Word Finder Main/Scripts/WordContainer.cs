@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WordContainer : MonoBehaviour
@@ -63,6 +64,35 @@ public class WordContainer : MonoBehaviour
         
         return word;
     }
+    
+    public void Colorize(string secretWord)
+    {
+        List<char> chars = new List<char>(secretWord.ToCharArray());
+
+        for (int i = 0; i < letterContainers.Length; i++)
+        {
+            char letterToCheck = letterContainers[i].GetLetter();
+
+            if (letterToCheck == secretWord[i])
+            {
+                //valid
+                letterContainers[i].SetValid();
+                chars.Remove(letterToCheck);
+            }
+            else if (chars.Contains(letterToCheck))
+            {
+                //potential
+                letterContainers[i].SetPotential();
+                chars.Remove(letterToCheck);
+            }
+            else
+            {
+                // Invalid
+                letterContainers[i].SetInvalid();
+            }
+        }
+        
+    }
 
     public bool IsComplete()
     {
@@ -70,5 +100,5 @@ public class WordContainer : MonoBehaviour
     }
 
 
-   
+ 
 }
