@@ -6,6 +6,8 @@ public class InputManager : MonoBehaviour
     [Header(" Elements ")] 
     [SerializeField] private WordContainer[] wordContainers;
     [SerializeField] private Button tryButton;
+    [SerializeField] private KeyboardColorizer keyboardColorizer;
+    
 
     [Header(" Settings ")] 
     private int currentWordContainerIndex;
@@ -57,6 +59,7 @@ public class InputManager : MonoBehaviour
         string secretWord = WordManager.instance.GetSecretWord();
 
         wordContainers[currentWordContainerIndex].Colorize(secretWord);
+        keyboardColorizer.Colorize(secretWord, wordToCheck);
 
         if (wordToCheck == secretWord)
             Debug.Log("Level Complete");
