@@ -4,11 +4,18 @@ public class InputManager : MonoBehaviour
 {
     [Header(" Elements ")] 
     [SerializeField] private WordContainer[] wordContainers;
+
+    [Header(" Settings ")] 
+    private int currentWordContainerIndex;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         Initialize();
+
+
+        KeyboardKey.onKeyPressed += KeyPressedCallback;
     }
 
     // Update is called once per frame
@@ -24,6 +31,14 @@ public class InputManager : MonoBehaviour
             wordContainers[i].Initialize();
         }
         
+    }
+    
+    private void KeyPressedCallback(char letter)
+    {
+        if (wordContainers[currentWordContainerIndex].IsComplete())
+            currentWordContainerIndex++;
+        
+        wordContainers[currentWordContainerIndex].Add(letter);
     }
     
 }
