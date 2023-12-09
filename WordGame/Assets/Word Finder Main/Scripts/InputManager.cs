@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,11 @@ public class InputManager : MonoBehaviour
         Initialize();
 
         KeyboardKey.onKeyPressed += KeyPressedCallback;
+    }
+
+    private void OnDestroy()
+    {
+        KeyboardKey.onKeyPressed -= KeyPressedCallback;
     }
 
     // Update is called once per frame
@@ -62,7 +68,10 @@ public class InputManager : MonoBehaviour
         keyboardColorizer.Colorize(secretWord, wordToCheck);
 
         if (wordToCheck == secretWord)
+        {
             Debug.Log("Level Complete");
+            SetLevelComplete();
+        }
         else
         {
             Debug.Log("Wrong Word");
@@ -70,6 +79,11 @@ public class InputManager : MonoBehaviour
             DisableTryButton();
             currentWordContainerIndex++;
         }
+    }
+
+    private void SetLevelComplete()
+    {
+        GameManager.instance.SetGameState(GameState.LevelComplete);
     }
 
 
