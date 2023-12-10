@@ -11,12 +11,18 @@ public class UIManager : MonoBehaviour
     [Header(" Elements ")] 
     [SerializeField] private CanvasGroup gameCG;
     [SerializeField] private CanvasGroup levelCompleteCG;
+    [SerializeField] private CanvasGroup gameoverCG;
 
     [Header(" Level Complete Elements ")] 
     [SerializeField] private TextMeshProUGUI levelCompleteCoins;
     [SerializeField] private TextMeshProUGUI levelCompleteSecretWord;
     [SerializeField] private TextMeshProUGUI levelCompleteScore;
     [SerializeField] private TextMeshProUGUI levelCompleteBestScore;
+    
+    [Header(" Gameover Elements ")] 
+    [SerializeField] private TextMeshProUGUI gameoverCoins;
+    [SerializeField] private TextMeshProUGUI gameoverSecretWord;
+    [SerializeField] private TextMeshProUGUI gameoverBestScore;
 
     [Header(" Game Elements ")] 
     [SerializeField] private TextMeshProUGUI gameScore;
@@ -36,6 +42,7 @@ public class UIManager : MonoBehaviour
     {
         ShowGame();
         HideLevelComplete();
+        HideGameOver();
         
         GameManager.onGameStateChanged += GameStateChangedCallback;
     }
@@ -52,10 +59,16 @@ public class UIManager : MonoBehaviour
             case GameState.Game:
                 ShowGame();
                 HideLevelComplete();
+                HideGameOver();
                 break;
             
             case GameState.LevelComplete:
                 ShowLevelComplete();
+                HideGame();
+                break;
+            
+            case GameState.Gameover:
+                ShowGameOver();
                 HideGame();
                 break;
         }
@@ -94,6 +107,20 @@ public class UIManager : MonoBehaviour
     private void HideLevelComplete()
     {
         HideCG(levelCompleteCG);
+    }
+
+    private void ShowGameOver()
+    {
+        gameoverCoins.text = DataManager.instance.GetCoins().ToString();
+        gameoverSecretWord.text = WordManager.instance.GetSecretWord();
+        gameoverBestScore.text = DataManager.instance.GetBestScore().ToString();
+        
+        ShowCG(gameoverCG);
+    }
+
+    private void HideGameOver()
+    {
+        HideCG(gameoverCG);
     }
 
 
