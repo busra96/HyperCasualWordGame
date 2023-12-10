@@ -2303,7 +2303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 358248727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 308486076}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextButtonCallBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &358248727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6506,6 +6518,8 @@ MonoBehaviour:
   levelCompleteSecretWord: {fileID: 2108975947}
   levelCompleteScore: {fileID: 889809726}
   levelCompleteBestScore: {fileID: 1770175376}
+  gameScore: {fileID: 509435507}
+  gameCoins: {fileID: 1748500773}
 --- !u!1 &1456730496
 GameObject:
   m_ObjectHideFlags: 0
