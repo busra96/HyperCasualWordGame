@@ -7309,7 +7309,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343933263}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -7763,7 +7763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameCG: {fileID: 183265768}
   levelCompleteCG: {fileID: 1587991335}
-  gameoverCG: {fileID: 0}
+  gameoverCG: {fileID: 1343933265}
   levelCompleteCoins: {fileID: 306826839}
   levelCompleteSecretWord: {fileID: 2108975947}
   levelCompleteScore: {fileID: 889809726}
