@@ -1,12 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyboardColorizer : MonoBehaviour
 {
     [Header(" Elements ")]
     private KeyboardKey[] keys;
+
+    [Header(" Settings ")]
+    private bool shouldReset;
 
     private void Awake()
     {
@@ -30,11 +30,17 @@ public class KeyboardColorizer : MonoBehaviour
         {
             case GameState.Game:
                
-                Initialize();
+                if(shouldReset)
+                   Initialize();
                 
                 break;
             
             case GameState.LevelComplete:
+                shouldReset = true;
+                break;
+            
+            case GameState.Gameover:
+                shouldReset = true;
                 break;
         }
     }
@@ -45,6 +51,8 @@ public class KeyboardColorizer : MonoBehaviour
         {
             keys[i].Initialize();
         }
+
+        shouldReset = false;
     }
 
     // Update is called once per frame
