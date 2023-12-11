@@ -5515,7 +5515,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 771692865}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735343686}
+        m_TargetAssemblyTypeName: HintManager, Assembly-CSharp
+        m_MethodName: KeyboardHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &771692865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8385,6 +8397,7 @@ Transform:
   - {fileID: 308486075}
   - {fileID: 1434607964}
   - {fileID: 294438462}
+  - {fileID: 1735343685}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9048,6 +9061,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6017804276045772732, guid: ab1450c6252b0004a9ff7e5a08b6dfd2, type: 3}
   m_PrefabInstance: {fileID: 1714006587}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1735343684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1735343685}
+  - component: {fileID: 1735343686}
+  m_Layer: 0
+  m_Name: HintManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1735343685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735343684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1629632068}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1735343686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735343684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c2ea57d9e6f504cbee5389406e78ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboard: {fileID: 1434050142}
 --- !u!1 &1748500771
 GameObject:
   m_ObjectHideFlags: 0
@@ -9265,7 +9323,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1752078886}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735343686}
+        m_TargetAssemblyTypeName: HintManager, Assembly-CSharp
+        m_MethodName: LetterHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1752078886
 MonoBehaviour:
   m_ObjectHideFlags: 0
