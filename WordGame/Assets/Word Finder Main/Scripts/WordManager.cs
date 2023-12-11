@@ -86,6 +86,22 @@ public class WordManager : MonoBehaviour
         int wordStartIndex = wordIndex * 7;
 
         secretWord = words.Substring(wordStartIndex, 5).ToUpper();
+
+            #region string char control
+
+                char[] charArray = secretWord.ToCharArray();
+
+                for (int i = 0; i < charArray.Length; i++)
+                {
+                    if (charArray[i] == 'İ')
+                    {
+                        charArray[i] = 'I';
+                    }
+                }
+
+                secretWord = new string(charArray);
+
+            #endregion
         
         shouldReset = false;
     }
