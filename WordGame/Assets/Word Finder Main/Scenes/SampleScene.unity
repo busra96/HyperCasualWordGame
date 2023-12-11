@@ -7533,6 +7533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secretWord: busra
+  wordsText: {fileID: 4900000, guid: 9100746915536a047b2ec97c3bb4cbd3, type: 3}
 --- !u!4 &1394488064
 Transform:
   m_ObjectHideFlags: 0
