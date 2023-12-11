@@ -6337,7 +6337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 829553477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 308486076}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BackButtonCallBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &829553477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8730,9 +8742,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9bbc6e72a7acd4d8d030cd692a4254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuCG: {fileID: 1425888445}
   gameCG: {fileID: 183265768}
   levelCompleteCG: {fileID: 1587991335}
   gameoverCG: {fileID: 1343933265}
+  menuCoins: {fileID: 1737463210}
+  menuBestScore: {fileID: 965482289}
   levelCompleteCoins: {fileID: 306826839}
   levelCompleteSecretWord: {fileID: 2108975947}
   levelCompleteScore: {fileID: 889809726}
