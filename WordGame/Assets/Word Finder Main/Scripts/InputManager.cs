@@ -91,6 +91,8 @@ public class InputManager : MonoBehaviour
         
         wordContainers[currentWordContainerIndex].Add(letter);
         
+        HapticManager.Vibrate();
+        
         if (wordContainers[currentWordContainerIndex].IsComplete())
         {
             canAddLetter = false;

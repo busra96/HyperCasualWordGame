@@ -76,14 +76,14 @@ public class SettingManager : MonoBehaviour
 
     private void EnableHaptics()
     {
-        //HapticsManager.instance.EnableHaptics();
+        HapticManager.instance.EnableHaptics();
         hapticsImage.color = Color.white;
 
     }
 
     private void DisableHaptics()
     {
-        //HapticsManager.instance.DisableHaptics();
+        HapticManager.instance.DisableHaptics();
         hapticsImage.color = Color.gray;
     }
     
