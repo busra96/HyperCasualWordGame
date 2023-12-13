@@ -2704,7 +2704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 306821391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1083543711}
+        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
+        m_MethodName: HapticsButtonCallback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &306821391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7981,6 +7993,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045149123}
   m_CullTransparentMesh: 1
+--- !u!1 &1083543709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083543710}
+  - component: {fileID: 1083543711}
+  m_Layer: 0
+  m_Name: SettingsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1083543710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083543709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1629632068}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1083543711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083543709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0bb222f7172ab4899dde8d859f89cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsImage: {fileID: 2099435270}
+  hapticsImage: {fileID: 479542111}
+  soundsState: 0
+  hapticsState: 0
 --- !u!1 &1121628967
 GameObject:
   m_ObjectHideFlags: 0
@@ -8220,7 +8280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1126239434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1083543711}
+        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
+        m_MethodName: SoundsButtonCallback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1126239434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10832,6 +10904,7 @@ Transform:
   - {fileID: 1434607964}
   - {fileID: 294438462}
   - {fileID: 1735343685}
+  - {fileID: 1083543710}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
