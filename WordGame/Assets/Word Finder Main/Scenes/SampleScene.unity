@@ -11736,6 +11736,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 867758826}
+  letterAddedSound: {fileID: 630944371}
+  letterRemovedSound: {fileID: 304776582}
+  levelCompleteSound: {fileID: 1674664913}
+  gameOverSound: {fileID: 1905832722}
 --- !u!1 &1683366872
 GameObject:
   m_ObjectHideFlags: 0
